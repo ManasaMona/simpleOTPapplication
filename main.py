@@ -41,7 +41,7 @@ class OtpHandler(webapp2.RequestHandler):
     email = self.request.get('email')
     gen_otp(email)
     totp = pyotp.TOTP(userOtpMap[email])
-    mail.send_mail(sender="OTP <vamsi0493@gmail.com>",
+    mail.send_mail(sender="OTP <manasaalisetty@gmail.com>",
       to=email,
       subject="OTP - No-reply",
       body=str(totp.now())
